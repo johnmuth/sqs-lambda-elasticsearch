@@ -1,2 +1,12 @@
-# sqs-lambda-cloudsearch
-Example loading data to cloudsearch via sqs
+# sqs-lambda-elasticsearch
+
+Example repository demonstrating how to load data into an AWS ElasticSearch cluster,
+using SQS and Lambda.
+
+## Create the AWS infrastructure
+
+```bash
+
+docker-compose run terraform-runner apply
+
+```

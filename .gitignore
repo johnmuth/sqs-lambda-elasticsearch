@@ -1,0 +1,4 @@
+.idea/
+*.zip
+terraform/.terraform/
+terraform/terraform.tfstate*
