@@ -1,12 +1,12 @@
 data "archive_file" "elasticsearch_indexer_lambda" {
   type        = "zip"
-  source_file = "/lambda/elasticsearch_indexer_lambda.py"
+  source_dir = "/lambda"
   output_path = "/lambda/elasticsearch_indexer_lambda.py.zip"
 }
 
 resource "aws_lambda_function" "elasticsearch_indexer_lambda" {
-  function_name = "example_lambda"
-  handler = "example_lambda.handler"
+  function_name = "elasticsearch_indexer_lambda"
+  handler = "elasticsearch_indexer_lambda.handler"
   role = "${aws_iam_role.elasticsearch_indexer_lambda.arn}"
   runtime = "python3.7"
 
